@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>LIKE DISLIKE </title>
+   <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+rel="stylesheet"
+/>
+   
+   <style>
+   table
+   {
+    height: 500px;
+    width: 500px;
+   }
+   img
+   {
+    height: 200px;
+    height: 200px;
+   }
+
+   </style>
+</head>
+<body>
+
+    <table border="2" width="50%">
+                <tr>
+                    <th style="background-color: aqua ">LIKE DISLIKE APP</th>
+                </tr>
+                <tr>
+                    <td><button onclick="incLike()"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyaqX75m3phhQOZ3oMytSu13Hec81x5N6fEg&usqp=CAU" alt="" srcset=""></button>
+                         <span id="up">0</span></td>
+                    <td><button onclick="decLike()"><img src="https://cdn-icons-png.flaticon.com/512/3128/3128319.png" alt="" srcset=""></button>
+                        <span id="down">0</span>
+                <tr>
+                    <th style="background-color: lightskyblue">TOTAL</th>
+                    <td><span id="total">0</span></td>
+                    
+                </tr>
+    </table>
+    <!-- script code -->
+    <script>
+        let spanUP=document.querySelector("#up");
+        let spanDN=document.querySelector("#down");
+        let spanTL=document.querySelector("#total");
+        
+        let countup=0;
+        let countdn=0;
+        spanUP.InnerText=countup;
+        spanDN.innerText=countdn;
+        let sum=0;
+
+        function incLike()
+        {
+            countup++;
+            spanUP.innerText=countup;
+            total();
+        }
+        function decLike()
+        {
+            countdn++;
+            spanDN.innerText=countdn;
+            total();
+        }
+        function total()
+        {
+                sum=countdn+countup;
+                spanTL.innerText= sum;
+        }
+
+
+    </script>
+    
+    
+</body>
+</html>
